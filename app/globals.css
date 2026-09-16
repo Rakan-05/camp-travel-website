@@ -1,0 +1,373 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
+@import "tailwindcss";
+
+/* ========================================
+   THEME
+======================================== */
+
+* {
+  /* -----------------------------
+     COLORS
+  ----------------------------- */
+
+  --color-green-50: #30af5b;
+  --color-green-90: #292c27;
+
+  --color-gray-10: #eeeeee;
+  --color-gray-20: #a2a2a2;
+  --color-gray-30: #7b7b7b;
+  --color-gray-50: #585858;
+  --color-gray-90: #141414;
+
+  --color-orange-50: #ff814c;
+  --color-blue-70: #021639;
+  --color-yellow-50: #fec601;
+
+  /* -----------------------------
+     BREAKPOINTS
+  ----------------------------- */
+
+  --breakpoint-xs: 400px;
+  --breakpoint-3xl: 1680px;
+  --breakpoint-4xl: 2200px;
+
+  /* -----------------------------
+     BORDER RADIUS
+  ----------------------------- */
+
+  --radius-5xl: 40px;
+
+  /* -----------------------------
+     MAX WIDTH
+  ----------------------------- */
+
+  --container-10xl: 1512px;
+
+  /* -----------------------------
+     BACKGROUND IMAGES
+  ----------------------------- */
+
+  --background-image-bg-img-1: url("/img-1.png");
+  --background-image-bg-img-2: url("/img-2.png");
+  --background-image-feature-bg: url("/feature-bg.png");
+  --background-image-pattern: url("/pattern.png");
+  --background-image-pattern-2: url("/pattern-bg.png");
+}
+
+/* ========================================
+   GLOBAL
+======================================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+}
+
+/* ========================================
+   BUTTONS
+======================================== */
+.btn_white {
+  border: 1px solid white;
+  background-color: white;
+  padding: 0.75rem 2rem;
+  color: #111827;
+}
+
+.btn_white_text {
+  border: 1px solid white;
+  background-color: white;
+  padding: 0.75rem 2rem;
+  color: #111827;
+}
+
+.btn_green {
+  border: 1px solid var(--color-green-50);
+  background-color: var(--color-green-50);
+  padding: 1.25rem 2rem;
+  color: white;
+}
+
+.btn_dark_green {
+  background-color: var(--color-green-90);
+  padding: 0.5rem 0.8rem;
+  color: white;
+  transition: all 0.3s;
+}
+
+.btn_dark_green:hover {
+  background-color: black;
+}
+
+.btn_dark_green_outline {
+  border: 1px solid var(--color-gray-20);
+  background-color: var(--color-green-90);
+  padding: 1.25rem 2rem;
+  color: white;
+}
+
+/* ========================================
+   CONTAINERS
+======================================== */
+
+.max-container {
+  width: 100%;
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.padding-container {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  margin: 1rem;
+}
+
+@media (min-width: 1024px) {
+  .padding-container {
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+}
+
+/* ========================================
+   FLEX
+======================================== */
+
+.flexCenter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flexBetween {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.flexStart {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.flexEnd {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+/* ========================================
+   REGULAR FONTS
+======================================== */
+
+.regular-64 {
+  font-size: 64px;
+  font-weight: 400;
+  line-height: 120%;
+}
+
+.regular-40 {
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 120%;
+}
+
+.regular-32 {
+  font-size: 32px;
+  font-weight: 400;
+}
+
+.regular-24 {
+  font-size: 24px;
+  font-weight: 400;
+}
+
+.regular-20 {
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.regular-18 {
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.regular-16 {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.regular-14 {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.medium-14 {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* ========================================
+   BOLD FONTS
+======================================== */
+
+.bold-88 {
+  font-size: 88px;
+  font-weight: 700;
+  line-height: 120%;
+}
+
+.bold-64 {
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 120%;
+}
+
+.bold-52 {
+  font-size: 52px;
+  font-weight: 700;
+  line-height: 120%;
+}
+
+.bold-40 {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 120%;
+}
+
+.bold-32 {
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.bold-20 {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.bold-18 {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.bold-16 {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+/* ========================================
+   HERO
+======================================== */
+
+.hero-map {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+
+  @media (min-width: 768px) {
+    right: -7rem;
+  }
+
+  @media (min-width: 1280px) {
+    top: -15rem;
+  }
+}
+
+/* ========================================
+   CAMP
+======================================== */
+
+.camp-quote {
+  position: absolute;
+  right: -1.5rem;
+  bottom: 1rem;
+  width: 140px;
+
+  @media (min-width: 1024px) {
+    bottom: 2.5rem;
+  }
+
+  @media (min-width: 1280px) {
+    right: -2rem;
+    width: 186px;
+  }
+}
+
+/* ========================================
+   FEATURE
+======================================== */
+
+.feature-phone {
+  position: absolute;
+  top: 13%;
+  z-index: 10;
+  display: none;
+  max-width: 1500px;
+  transform: rotate(15deg);
+
+  @media (min-width: 768px) {
+    left: -4rem;
+  }
+
+  @media (min-width: 1024px) {
+    display: flex;
+  }
+}
+
+/* ========================================
+   GET APP
+======================================== */
+
+.get-app {
+  position: relative;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 8rem;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 3rem 1.5rem;
+  color: white;
+
+  @media (min-width: 640px) {
+    flex-direction: row;
+    gap: 3rem;
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
+
+  @media (min-width: 1024px) {
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+
+  @media (min-width: 1280px) {
+    max-height: 598px;
+  }
+}
+
+/* ========================================
+   HIDE SCROLLBAR
+======================================== */
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
