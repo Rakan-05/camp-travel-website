@@ -5,7 +5,7 @@
    THEME
 ======================================== */
 
-* {
+@theme {
   /* -----------------------------
      COLORS
   ----------------------------- */
@@ -59,8 +59,6 @@
 ======================================== */
 
 * {
-  margin: 0;
-  padding: 0;
   box-sizing: border-box;
 }
 
@@ -124,7 +122,6 @@ body {
 .padding-container {
   padding-left: 1.5rem;
   padding-right: 1.5rem;
-  margin: 1rem;
 }
 
 @media (min-width: 1024px) {
@@ -271,8 +268,10 @@ body {
   top: 0;
   width: 100vw;
   height: 100vh;
+  background-image: var(--background-image-pattern-2);
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
 
   @media (min-width: 768px) {
     right: -7rem;
@@ -336,6 +335,7 @@ body {
   justify-content: space-between;
   gap: 8rem;
   overflow: hidden;
+  background-image: var(--background-image-pattern);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
